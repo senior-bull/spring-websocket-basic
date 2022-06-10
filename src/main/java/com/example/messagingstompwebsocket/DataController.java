@@ -9,12 +9,11 @@ public class DataController {
 
 	private final DataProvider dataProvider = new DataProvider();
 
-	// TODO could be used for snapshots
 	@MessageMapping("/hello")
 	@SendTo("/topic/prices")
-	public SnapshotMsg greeting(HelloMessage message) throws Exception {
+	public PriceUpdatesMessage updatePricesOnSubscribers(HelloMessage message) throws Exception {
 
-		return new SnapshotMsg(dataProvider.snapshot());
+		return new PriceUpdatesMessage(dataProvider.snapshot());
 	}
 
 }
