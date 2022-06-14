@@ -1,4 +1,6 @@
-package com.example.messagingstompwebsocket;
+package com.example.messagingstompwebsocket.data;
+
+import com.example.messagingstompwebsocket.StockPrice;
 
 import java.util.ArrayList;
 import java.util.List;
